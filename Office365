@@ -1,0 +1,29 @@
+Your version of the Microsoft Azure Active Directory Module for Windows PowerShell might be out of date. To check, run the following command in Office 365 PowerShell or the Microsoft Azure Active Directory Module for Windows PowerShell:
+
+(Get-Item C:\Windows\System32\WindowsPowerShell\v1.0\Modules\MSOnline\Microsoft.Online.Administration.Automation.PSModule.dll).VersionInfo.FileVersion
+
+Connect to Office 365 PowerShell
+https://technet.microsoft.com/en-us/library/dn975125.aspx 
+
+Step 1: Install required software
+These steps are required once on your computer, not every time you connect. However, you'll likely need to install newer versions of the software periodically.
+1. Install the 64-bit version of the Microsoft Online Services Sign-in Assistant: Microsoft Online Services Sign-in Assistant for IT Professionals RTW.
+2.Install the 64-bit version of the Microsoft Azure Active Directory Module for Windows PowerShell with these steps:
+
+$Cred = Get-Credential
+Connect-MsolService -Credential $Cred
+
+
+To connect with multi-factor authentication (MFA):
+1.In the Microsoft Azure Active Directory Module for Windows PowerShell command window, run the following command.
+
+
+
+Connect-MsolService
+Step 2: Open the Windows Azure Active Directory Module
+
+1.Find and open the Microsoft Azure Active Directory Module for Windows PowerShell by using one of the following methods based on your version of Windows:
+◦Start menu   From the desktop, click Start, and then type Azure.
+◦No Start menu   Search for Azure using any of these methods:
+◾On the Start screen, click an empty area, and type Azure.
+
