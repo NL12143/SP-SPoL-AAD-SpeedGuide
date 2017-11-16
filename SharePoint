@@ -1,0 +1,24 @@
+Download the msi installer > Setup 
+Right mouse on tile in Start > Open file location > Properties > Copy 
+C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe -NoExit -Command "Import-Module Microsoft.Online.SharePoint.PowerShell -DisableNameChecking 
+Start IDE 
+Import-Module Microsoft.Online.SharePoint.PowerShell
+Add-PSSnapin Microsoft.SharePoint.PowerShell
+ 
+$adminUPN= "   " # example "jdoe@contoso.onmicrosoft.com"
+$orgName=  "   " # example "contoso"
+$cred = Get-Credential -UserName $adminUPN -Message "Type the password for $adminUPN" 
+Connect-SPOService -Url https://$orgName-admin.sharepoint.com -Credential $cred 
+
+Get-SPOsite 
+Get-SPOtenant 
+
+#Introduction to the SharePoint Online Management Shell
+#https://technet.microsoft.com/en-us/library/fp161388.aspx
+
+
+To use SharePoint Online PowerShell commands, you must be a SharePoint Online global administrator.
+
+Create a trial tenant 30 days 
+Create a demo tenant 90 days https://demo.microsoft.com
+
