@@ -1,5 +1,3 @@
-(Get-Item C:\Windows\System32\WindowsPowerShell\v1.0\Modules\MSOnline\Microsoft.Online.Administration.Automation.PSModule.dll).VersionInfo.FileVersion
-
 Open the Microsoft Azure Active Directory Module for Windows PowerShell
 $Cred = Get-Credential
 
