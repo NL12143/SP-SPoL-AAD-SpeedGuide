@@ -1,6 +1,8 @@
 Open the Microsoft Azure Active Directory Module for Windows PowerShell
-$Cred = Get-Credential
+Connect-MsolService
+(Get-MsolDomain).Name 
 
+B. 
 $OrgName = "M365x257123"
 $RootURL = "$orgname.sharepoint.com"
 $AdminUPN = "admin@$orgname.onmicrosoft.com"
@@ -11,14 +13,10 @@ $PlainPass = "**************"
 $SecurePass = $PlainPass | ConvertTo-SecureString -AsPlainText -Force 
 $credentials = New-Object System.Management.Automation.PSCredential -ArgumentList $adminUPN, $SecurePass 
 
-*Connect-MsolService -Credential $credentials*
+Connect-MsolService -Credential $credentials
 
 $Domain = Get-MsolDomain  
 (Get-MsolDomain).Name 
-
-
-
-Connect-MsolService -Credential $Cred
 
 
 PREREQS
@@ -28,10 +26,5 @@ https://technet.microsoft.com/en-us/library/dn975125.aspx
 Step 1: Install required software
 1.Install the 64-bit version of the Microsoft Online Services Sign-in Assistant: Microsoft Online Services Sign-in Assistant for IT Professionals RTW.
 2.Install the 64-bit version of the Microsoft Azure Active Directory Module for Windows PowerShell with these steps:
-
-
-
-Connect-MsolService
-Step 2: Open the Windows Azure Active Directory Module
 
 
