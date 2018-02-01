@@ -21,3 +21,7 @@ The SharePoint Online Management Shell has a new Windows PowerShell module that 
 
 # SpeedGuide-SPOL
 Connect to SharePoint online
+
+
+https://docs.microsoft.com/en-us/office365/enterprise/powershell/connect-to-all-office-365-services-in-a-single-windows-powershell-window
+
