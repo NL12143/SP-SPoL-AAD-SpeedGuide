@@ -1,9 +1,8 @@
+A. 
 Connect-SPOService -Url https://$orgName-admin.sharepoint.com 
 
 Get-SPOtenant 
 Get-SPOsite 
-
-
 
 B. 
 Start IDE 
